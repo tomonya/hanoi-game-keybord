@@ -57,22 +57,23 @@ const eraseCookie = (name) => {
 
 // 繝上ヮ繧､縺ｮ蝪疲緒逕ｻ
 const towerDrawing = (field, towers) => {
-    field.innerHTML = "";
-    towers.forEach((value, i) => {
-        let tower = document.createElement("div");
-        if (disks <= 10) {
-            tower.style.width = `${value}0%`;
-        } else {
-            tower.style.width = `${(value * 10) / 2}%`;
-        }
-        tower.style.height = "20px";
-        tower.style.backgroundColor = value % 2 === 0 ? "#777777" : "#660000";
-        tower.style.margin = "4px auto";
-        field.appendChild(tower);
-    });
-    field.classList.remove("click_field");
+  field.innerHTML = "";
+  towers.forEach((value, i) => {
+    if (value > 0) { // valueが0より大きい場合のみ円盤を描画
+      let tower = document.createElement("div");
+      if (disks <= 10) {
+        tower.style.width = `${value * 10}%`; // 修正: 円盤の幅を適切に計算
+      } else {
+        tower.style.width = `${(value * 100) / disks}%`; // 修正: 円盤の幅を適切に計算
+      }
+      tower.style.height = "20px";
+      tower.style.backgroundColor = value % 2 === 0 ? "#777777" : "#660000";
+      tower.style.margin = "4px auto";
+      field.appendChild(tower);
+    }
+  });
+  field.classList.remove("click_field");
 };
-
 // 豁｣隗｣蛻､螳
 const isCorrect = () => {
     if (
