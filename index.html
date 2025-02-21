@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' content='ハノイの塔 ブラウザゲーム 円盤の数は3枚から20枚の間で選べます'>
+    <title>ハノイの塔 ブラウザゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>ハノイの塔</h1>
+    <h3>ルール・操作方法</h3>
+    <div class="note">
+        <p>円盤の塔を他のマスへ移動し、積み上げるゲームです。円盤は一度に一枚だけ別のマスへ何度でも移動できます。小さな円盤の上に大きな円盤を重ねることは出来ません。左端のマス以外に積み上げることが出来ればゲームクリアとなります。</p>
+        <p>円盤の移動方法:
+            <ul>
+                <li>移動したい円盤があるマスをクリック。移動先のマスをクリックすると円盤が移動されます。</li>
+                <li>キーボードの1, 2, 3キーでそれぞれのマスを選択し、Enterキーで移動します。</li>
+            </ul>
+        </p>
+        <p>数字の書いてあるボタンを押すと円盤の数を変えることが出来ます。</p>
+    </div>
+
+    <div style="display: flex;">
+        <div id="counter"></div>
+        <div id="msg"></div>
+    </div>
+    <div class="fields">
+        <div id="field_1" value="実行"></div>
+        <div id="field_2"></div>
+        <div id="field_3"></div>
+    </div>
+    <div id="buttons">
+        <button type="button" onclick="buttonClick(3)">3</button>
+        <button type="button" onclick="buttonClick(4)">4</button>
+        <button type="button" onclick="buttonClick(5)">5</button>
+        <button type="button" onclick="buttonClick(6)">6</button>
+        <button type="button" onclick="buttonClick(7)">7</button>
+        <button type="button" onclick="buttonClick(8)">8</button>
+        <button type="button" onclick="buttonClick(9)">9</button>
+        <button type="button" onclick="buttonClick(10)">10</button>
+        <button type="button" onclick="buttonClick(11)">11</button>
+        <button type="button" onclick="buttonClick(12)">12</button>
+        <button type="button" onclick="buttonClick(13)">13</button>
+        <button type="button" onclick="buttonClick(14)">14</button>
+        <button type="button" onclick="buttonClick(15)">15</button>
+        <button type="button" onclick="buttonClick(16)">16</button>
+        <button type="button" onclick="buttonClick(17)">17</button>
+        <button type="button" onclick="buttonClick(18)">18</button>
+        <button type="button" onclick="buttonClick(19)">19</button>
+        <button type="button" onclick="buttonClick(20)">20</button>
+        <p class="note">
+            ※円盤の枚数が3枚の場合のゲームクリアまでの最少移動回数は7回です。円盤の枚数が増え20枚になると最少移動回数は1048575回となり、1回動かすのに1秒かかると考えた場合ゲームクリアまで約12日と3時間16分15秒かかります。
+        </p>
+        <button id="resetButton">リセット</button>
+    </div>
+    <div id="link">
+        <a href="https://bubudoufu.com/math-games/">その他の数学ゲーム・パズル</a>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
