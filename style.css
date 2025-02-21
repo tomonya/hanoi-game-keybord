@@ -1,0 +1,60 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,*::before,*::after{box-sizing:border-box}*{margin:0}html,body{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+
+.fields {
+  display: flex;
+}
+#field_1,
+#field_2,
+#field_3 {
+  width: 100%;
+  border: 1px solid black;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.click_field {
+  background-color: rgba(255, 255, 128, 0.5);
+}
+#counter{
+  margin:6px 12px;
+  font-weight: 900;
+}
+#msg {
+  color: red;
+  font-weight: 900;
+  margin:6px 12px;
+}
+#buttons{
+  margin: 12px;
+}
+button{
+  font-size: 12px;
+  line-height: 16px;
+}
+.note {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 8px 12px;
+}
+h1 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  margin: 12px;
+}
+h3 {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  margin: 2px 12px;
+
+}
+#link{
+  /* margin-top: 4px; */
+  text-align: center;
+}
+#link a{
+  font-size: 12px;
+  text-decoration: underline;
+}
